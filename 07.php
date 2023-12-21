@@ -20,12 +20,27 @@ class Empleado {
         $this->departamento = $departamento;
         $this->email = $email;
         $this->codigo = $codigo;
+
+        // $this->nombreEmpleado();
+    }
+
+    // LOS METODOS SON FUNCIONES QUE ESTAN DENTRO DE LA CLASE Y QUE PODEMOS USAR PARA DEVOLVERNOS UN VALOR
+    public function nombreEmpleado(){
+        echo $this->nombre . " " . $this->apellido;
+    }
+
+
+    public function departamentoEmpleado(){
+        echo $this->departamento;
     }
 
 }
 
+
 $hazael = new Empleado('Hazael', 'Flores', 'Dasc', 'hazaelfg', 006);
+// $hazael ->nombreEmpleado();
 $yeya = new Empleado('Andrea', 'Trasvina', 'Dasc', 'alucero', 007);
+// $yeya ->nombreEmpleado();
 
 
 
@@ -36,3 +51,8 @@ echo "<pre>";
 echo "<pre>";
 var_dump($yeya);
 echo "<pre>";
+
+// echo $hazael->nombreEmpleado();
+// echo $yeya->nombreEmpleado();
+
+echo $hazael->departamentoEmpleado();
